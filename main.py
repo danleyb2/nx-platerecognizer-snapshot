@@ -7,6 +7,14 @@ b) Make an HTTP request to notify about motion events
 Start Server that listens for the HTTP requests from the camera
 When a motion event is received by the server...
 
+
+Auth
+https://support.networkoptix.com/hc/en-us/articles/360020373754-Connecting-a-System-to-Nx-Cloud-using-the-API
+
+Dev API Endpoints
+https://localhost:7001/static/index.html#/developers/api/ec2/cameraThumbnail
+
+
 """
 
 import cgi
