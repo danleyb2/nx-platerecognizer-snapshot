@@ -74,7 +74,13 @@ def download_thumbnail(start_timestamp):
 
     return thumbnail_res
 
+def send_events(plate_reader_response):
+    # 1. Parse Plate Reader Response for Plates
 
+    # 2. Send Plates to NX
+    # http://NX_Login:NX_Password@NX_API_Base/api/createEvent?source=LPR&caption=License_Plate_Info_Here&description=
+
+    pass
 
 def main():
     # Retrieve the latest bookmark from the camera to get the motion start timestamp
@@ -104,6 +110,10 @@ def main():
         )
 
         logging.info(plate_reader_response.text)
+
+        # Send Events Back to NX VMS
+        send_events(plate_reader_response.json())
+
     else:
 
         logging.info('Bookmarks not found')
